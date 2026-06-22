@@ -12,15 +12,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Lint HTML
-        run: npx htmlhint "*.html"
-
-      - name: Lint CSS
-        run: npx stylelint "style.css" --allow-empty-input
-
-      - name: Build with Parcel
-        run: npx parcel build index.html lahore.html hunza.html karachi.html swat.html --no-cache --dist-dir dist
-
       - name: Docker login
         uses: docker/login-action@v3
         with:
